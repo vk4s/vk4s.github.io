@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Operators in Bash Shell Programming - CS111 - Adventures of programming</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Vikash Patel" /><meta name="description" content="Photo by NASA on Unsplash
+ If you want to learn bash bash scripting please read this article.
+Learn complete Linux bash (shell) scripting in one article
+Operators help us perform various types of operations such as addition, multiplication etc.
+There are following types of operators present in bash:
+ Arithmetic, Relational, Boolean, File Test, String Test  1. Arithmetic Operators All the arithmetic operators present in bash are discussed below with examples." /><meta name="keywords" content="Coding, Development, Life" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="https://vikaspatelp83.github.io/post/operators-in-bash-shell-programming/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.e5f9685953f369c4f625872fe05d695b0e2042789bf424bd072eb21a46ccaec9.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Operators in Bash Shell Programming" />
+<meta property="og:description" content="Photo by NASA on Unsplash
+ If you want to learn bash bash scripting please read this article.
+Learn complete Linux bash (shell) scripting in one article
+Operators help us perform various types of operations such as addition, multiplication etc.
+There are following types of operators present in bash:
+ Arithmetic, Relational, Boolean, File Test, String Test  1. Arithmetic Operators All the arithmetic operators present in bash are discussed below with examples." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vikaspatelp83.github.io/post/operators-in-bash-shell-programming/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-05-04T01:16:10&#43;05:30" />
+<meta property="article:modified_time" content="2021-05-04T01:16:10&#43;05:30" />
+
+<meta itemprop="name" content="Operators in Bash Shell Programming">
+<meta itemprop="description" content="Photo by NASA on Unsplash
+ If you want to learn bash bash scripting please read this article.
+Learn complete Linux bash (shell) scripting in one article
+Operators help us perform various types of operations such as addition, multiplication etc.
+There are following types of operators present in bash:
+ Arithmetic, Relational, Boolean, File Test, String Test  1. Arithmetic Operators All the arithmetic operators present in bash are discussed below with examples."><meta itemprop="datePublished" content="2021-05-04T01:16:10&#43;05:30" />
+<meta itemprop="dateModified" content="2021-05-04T01:16:10&#43;05:30" />
+<meta itemprop="wordCount" content="1228">
+<meta itemprop="keywords" content="Linux,Programming,Bash," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Operators in Bash Shell Programming"/>
+<meta name="twitter:description" content="Photo by NASA on Unsplash
+ If you want to learn bash bash scripting please read this article.
+Learn complete Linux bash (shell) scripting in one article
+Operators help us perform various types of operations such as addition, multiplication etc.
+There are following types of operators present in bash:
+ Arithmetic, Relational, Boolean, File Test, String Test  1. Arithmetic Operators All the arithmetic operators present in bash are discussed below with examples."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">CS111 :: Adventures</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">CS111 :: Adventures</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Operators in Bash Shell Programming</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> May 4, 2021 </span>
+        <div class="post-category">
+            <a href="/categories/tutorial/"> Tutorial </a>
+            </div>
+          <span class="more-meta"> 1228 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-arithmetic-operators">1. Arithmetic Operators</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#2-relational-operators">2. Relational Operators</a>
+          <ul>
+            <li><a href="#-eq-equals-to-operator">-eq (Equals to operator)</a></li>
+            <li><a href="#-ne-not-equals-to-operator">-ne (Not equals to operator)</a></li>
+            <li><a href="#-gt-greater-than-operator">-gt (Greater than operator)</a></li>
+            <li><a href="#-lt-less-than-operator">-lt (Less than operator)</a></li>
+            <li><a href="#-ge-greater-than-or-equals-to-operator">-ge (Greater than or equals to operator)</a></li>
+            <li><a href="#-le-less-than-or-equals-to-operator">-le (Less than or equals to operator)</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-boolean-operators">3. Boolean Operators</a>
+          <ul>
+            <li><a href="#-not-operator">! (Not operator)</a></li>
+            <li><a href="#-o-or-operator">-o (OR operator)</a></li>
+            <li><a href="#-a-and-operator">-a (AND operator)</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-string-test-operators">4. String Test Operators</a>
+          <ul>
+            <li><a href="#-equality-operator">= (Equality Operator)</a></li>
+            <li><a href="#-not-equal-operator">!= (Not equal operator)</a></li>
+            <li><a href="#-z-zero-length-string">-z (Zero length string)</a></li>
+            <li><a href="#-n-non-zero-length-string">-n (Non zero length string)</a></li>
+            <li><a href="#empty-string-check">Empty string check</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="https://images.unsplash.com/photo-1614314107768-6018061b5b72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1334&amp;q=80" alt="A Picture of Pluto by NASA featured on Village Programmer">
+Photo by <a href="https://unsplash.com/photos/-5V6VZxSQRo">NASA</a> on Unsplash</p>
+<hr>
+<p>If you want to learn bash bash scripting please read this article.<br>
+<a href="/post/learn-complete-linux-bash-scripting-in-one-article/">Learn complete Linux bash (shell) scripting in one article</a></p>
+<p>Operators help us perform various types of operations such as addition, multiplication etc.<br>
+There are following types of operators present in bash:</p>
+<ul>
+<li>Arithmetic,</li>
+<li>Relational,</li>
+<li>Boolean,</li>
+<li>File Test,</li>
+<li>String Test</li>
+</ul>
+<h2 id="1-arithmetic-operators">1. Arithmetic Operators</h2>
+<p>All the arithmetic operators present in bash are discussed below with examples.<br>
+These operators work with integers.</p>
+<h4 id="11-addition-operator">1.1 Addition Operator</h4>
+<p>It&rsquo;s a <strong><code>+</code></strong> that adds operands together.<br>
+Shown in the below example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">20</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">30</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> + <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>50</p>
+</blockquote>
+<h5 id="note">NOTE:</h5>
+<blockquote>
+<ol>
+<li>The <strong><code>expr </code></strong> command evaluates the expression.</li>
+<li>There is <code>&lt;space&gt;</code> before and after the <strong><code>+</code></strong> operator .</li>
+</ol>
+</blockquote>
+<h4 id="12-subtraction-operator">1.2 Subtraction Operator</h4>
+<p>It&rsquo;s a <strong><code>-</code></strong> that subtracts second operand from first operand.<br>
+Shown in the below example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">40</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">30</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> - <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>10</p>
+</blockquote>
+<h4 id="13-multiplication-operator">1.3 Multiplication Operator</h4>
+<p>It&rsquo;s a <strong><code>*</code></strong> that multplies operands together.<br>
+Shown in the below example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">2</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">3</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> * <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>6</p>
+</blockquote>
+<h4 id="14-division-operator">1.4 Division Operator</h4>
+<p>It&rsquo;s a <strong><code>/</code></strong> that performs division operation.<br>
+Shown in the below example:<br>
+-Example 1-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">200</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">50</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> / <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>4</p>
+</blockquote>
+<p>-Example 2-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">20</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">3</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> / <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>6</p>
+</blockquote>
+<h4 id="15-modulus-operator">1.5 Modulus Operator</h4>
+<p>It&rsquo;s a <strong><code>%</code></strong> that performs modulus operation and returns the remainder.<br>
+Shown in the below example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">3</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> % <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<h4 id="16-equality-check-operator">1.6 Equality Check Operator</h4>
+<p>It&rsquo;s a <strong><code>==</code></strong> that performs equality check operation and returns 1 if both sides are equal otherwise returns 0.<br>
+Shown in the below example:</p>
+<p>-Example 1-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> <span class="o">==</span> <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<p>-Example 2-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">5</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> <span class="o">==</span> <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>0</p>
+</blockquote>
+<h4 id="17-not-equal-check-operator">1.7 Not Equal Check Operator</h4>
+<p>It&rsquo;s a <strong><code>!=</code></strong> that performs equality check operation and returns 0 if both sides are equal otherwise returns 1.<br>
+Shown in the below example:<br>
+-Example 1-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> <span class="o">==</span> <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>0</p>
+</blockquote>
+<p>-Example 2-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">5</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> <span class="o">==</span> <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<h2 id="2-relational-operators">2. Relational Operators</h2>
+<p>Relational operators are used to perform comparison among given operands.</p>
+<h3 id="-eq-equals-to-operator">-eq (Equals to operator)</h3>
+<p>This checks whether the operands are equal.<br>
+This operator is used to perform comparison in the <code>if</code> condition.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">10</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -eq <span class="nv">$b</span> <span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;Equal&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;Not Equal&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Equal</p>
+</blockquote>
+<h3 id="-ne-not-equals-to-operator">-ne (Not equals to operator)</h3>
+<p>This checks whether the operands are equal.<br>
+This operator is used to perform comparison in the <code>if</code> condition.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">20</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -ne <span class="nv">$b</span> <span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;Not Equal&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;Equal&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Not Equal</p>
+</blockquote>
+<h3 id="-gt-greater-than-operator">-gt (Greater than operator)</h3>
+<p>This checks whether the first operand is greater than the second operand.<br>
+This operator is used to perform comparison in the <code>if</code> condition.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">40</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">20</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -gt <span class="nv">$b</span> <span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is greater than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is not greater than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>40 is greater than 20</p>
+</blockquote>
+<h3 id="-lt-less-than-operator">-lt (Less than operator)</h3>
+<p>This checks whether the first operand is less than the second operand.<br>
+This operator is used to perform comparison in the <code>if</code> condition.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">20</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">40</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -lt <span class="nv">$b</span> <span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is less than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is not less than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>20 is greater than 40</p>
+</blockquote>
+<h3 id="-ge-greater-than-or-equals-to-operator">-ge (Greater than or equals to operator)</h3>
+<p>This checks whether the first operand is greater than or equals to the second operand.<br>
+This operator is used to perform comparison in the <code>if</code> condition.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">40</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">20</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -ge <span class="nv">$b</span> <span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is greater than or equals to </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is not greater than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>40 is greater than or equals to 20</p>
+</blockquote>
+<h3 id="-le-less-than-or-equals-to-operator">-le (Less than or equals to operator)</h3>
+<p>This checks whether the first operand is greater than or equals to the second operand.<br>
+This operator is used to perform comparison in the <code>if</code> condition.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">40</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">200</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -le <span class="nv">$b</span> <span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is less than or equals to </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is not less than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>40 is less than or equals to 200</p>
+</blockquote>
+<h2 id="3-boolean-operators">3. Boolean Operators</h2>
+<h3 id="-not-operator">! (Not operator)</h3>
+<p>This changes <code>true</code> into <code>false</code> and vice versa.<br>
+We have used this operator in <em>Not equal operator</em> under arithmetic operators.
+Shown in the below example:<br>
+-Example 1-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> <span class="o">==</span> <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>0</p>
+</blockquote>
+<p>-Example 2-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">$x</span><span class="o">=</span><span class="m">10</span>
+<span class="nv">$y</span><span class="o">=</span><span class="m">5</span>
+<span class="nv">a</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$x</span> <span class="o">==</span> <span class="nv">$y</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$a</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will display:</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<h3 id="-o-or-operator">-o (OR operator)</h3>
+<p>Checks whether one of the operands is true and executes the statements.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">40</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">20</span>
+<span class="nv">c</span><span class="o">=</span><span class="m">10</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -gt <span class="nv">$b</span> -o <span class="nv">$c</span> -gt <span class="nv">$b</span><span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> or </span><span class="nv">$c</span><span class="s2"> is greater than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is not less than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>40 or 10 is greater than 20</p>
+</blockquote>
+<h3 id="-a-and-operator">-a (AND operator)</h3>
+<p>Checks whether all of the operands are true and executes the statements.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">a</span><span class="o">=</span><span class="m">40</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">20</span>
+<span class="nv">c</span><span class="o">=</span><span class="m">100</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$a</span> -gt <span class="nv">$b</span> -a <span class="nv">$c</span> -gt <span class="nv">$b</span><span class="o">]</span>
+	<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> and </span><span class="nv">$c</span><span class="s2"> are greater than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$a</span><span class="s2"> is not less than </span><span class="nv">$b</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>40 and 100 are greater than 20</p>
+</blockquote>
+<h2 id="4-string-test-operators">4. String Test Operators</h2>
+<p>These operators are used to perform string related comparisons.</p>
+<h3 id="-equality-operator">= (Equality Operator)</h3>
+<p>Check whether two strings are equal.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">user</span><span class="o">=</span><span class="s2">&#34;VIKAS&#34;</span>
+<span class="nv">defaultUser</span><span class="o">=</span><span class="s2">&#34;VIKAS&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$defaultUser</span> <span class="o">]</span>
+<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;User is allowed&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;User is not allowed&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>User is allowed</p>
+</blockquote>
+<h3 id="-not-equal-operator">!= (Not equal operator)</h3>
+<p>Check whether two strings are not equal.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">user</span><span class="o">=</span><span class="s2">&#34;VIKAS&#34;</span>
+<span class="nv">defaultUser</span><span class="o">=</span><span class="s2">&#34;DAVE&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$user</span> !<span class="o">=</span> <span class="nv">$defaultUser</span> <span class="o">]</span>
+<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;User is not allowed&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;User is allowed&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>User is not allowed</p>
+</blockquote>
+<h3 id="-z-zero-length-string">-z (Zero length string)</h3>
+<p>Checks whether the string is zero length.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">s</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+<span class="k">if</span> <span class="o">[</span> -z <span class="nv">$s</span> <span class="o">]</span>
+<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;String is zero length&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;String is non zero length&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>String is zero length</p>
+</blockquote>
+<h3 id="-n-non-zero-length-string">-n (Non zero length string)</h3>
+<p>Checks whether the string is empty.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">s</span><span class="o">=</span><span class="s2">&#34;Village Programmer&#34;</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="nv">$s</span> <span class="o">]</span>
+<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;String is non zero length&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;String is zero length&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>String is non zero length</p>
+</blockquote>
+<h3 id="empty-string-check">Empty string check</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">s</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$s</span> <span class="o">]</span>
+<span class="k">then</span>
+	<span class="nb">echo</span> <span class="s2">&#34;String is not empty&#34;</span>
+<span class="k">else</span>
+	<span class="nb">echo</span> <span class="s2">&#34;String is empty&#34;</span>
+<span class="k">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>String is not empty</p>
+</blockquote>
+<hr>
+<p><em><strong>Keep Learining, Keep Practicing. :) :)</strong></em></p>
+<hr>
+<p>That’s All. 😅</p>
+<p>Thanks for reading. 🙏<br>
+If you liked it feel free to share with your dear ones.💗<br>
+And tell me what do you think in the comment box.💬</p>
+<p>Stay tuned with CS111.</p>
+<p>This post was originally posted on <a href="https://villageprogrammer.blogspot.com">Village Programmer</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Vikash Patel</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        May 4, 2021
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          <a href="/tags/programming/">Programming</a>
+          <a href="/tags/bash/">Bash</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/avoid-memory-leaks-while-coding-in-c-plus-plus/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Avoid Memory Leaks While Coding in C Plus Plus</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/learn-complete-linux-bash-scripting-in-one-article/">
+            <span class="next-text nav-default">Learn Complete Linux Bash Scripting in One Article</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="https://vikaspatelp83.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Vikash Patel</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
