@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://vikaspatelp83.github.io/sitemap.xml
