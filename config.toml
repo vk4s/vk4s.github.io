@@ -8,7 +8,7 @@ enableEmoji = true
 theme = "even"
 enableGitInfo = false # use git commit log to generate lastmod record 
 
-publishDir: "docs"
+publishDir= "docs"
 
 # Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
 pygmentsOptions = "linenos=table"
