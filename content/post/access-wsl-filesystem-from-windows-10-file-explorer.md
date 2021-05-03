@@ -1,7 +1,7 @@
 ---
 title: "Access Wsl Filesystem From Windows 10 File Explorer"
 date: 2021-05-04T00:52:26+05:30
-draft: true
+draft: false
 tags: ["Windows 10", "WSL"]
 categories: ["Tutorial"]
 ---

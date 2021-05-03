@@ -1,7 +1,7 @@
 ---
 title: "Avoid Memory Leaks While Coding in C Plus Plus"
 date: 2021-05-04T01:24:39+05:30
-draft: true
+draft: false
 tags: ["Programming", "C++"]
 categories: ["Tutorial"]
 ---

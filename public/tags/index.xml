@@ -5,6 +5,61 @@
     <link>https://vikaspatelp83.github.io/tags/</link>
     <description>Recent content in Tags on CS111 - Adventures of programming</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://vikaspatelp83.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 04 May 2021 01:24:39 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://vikaspatelp83.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Tue, 04 May 2021 01:24:39 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://vikaspatelp83.github.io/tags/programming/</link>
+      <pubDate>Tue, 04 May 2021 01:24:39 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>https://vikaspatelp83.github.io/tags/bash/</link>
+      <pubDate>Tue, 04 May 2021 01:16:10 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://vikaspatelp83.github.io/tags/linux/</link>
+      <pubDate>Tue, 04 May 2021 01:16:10 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows 10</title>
+      <link>https://vikaspatelp83.github.io/tags/windows-10/</link>
+      <pubDate>Tue, 04 May 2021 00:52:26 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/tags/windows-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WSL</title>
+      <link>https://vikaspatelp83.github.io/tags/wsl/</link>
+      <pubDate>Tue, 04 May 2021 00:52:26 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/tags/wsl/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

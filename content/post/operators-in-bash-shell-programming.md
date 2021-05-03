@@ -1,7 +1,7 @@
 ---
 title: "Operators in Bash Shell Programming"
 date: 2021-05-04T01:16:10+05:30
-draft: true
+draft: false
 tags: ["Linux", "Programming", "Bash"]
 categories: ["Tutorial"]
 ---

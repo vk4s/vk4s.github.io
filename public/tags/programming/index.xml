@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CS111 - Adventures of programming</title>
-    <link>https://vikaspatelp83.github.io/</link>
-    <description>Recent content on CS111 - Adventures of programming</description>
+    <title>Programming on CS111 - Adventures of programming</title>
+    <link>https://vikaspatelp83.github.io/tags/programming/</link>
+    <description>Recent content in Programming on CS111 - Adventures of programming</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 May 2021 01:24:39 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 May 2021 01:24:39 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Avoid Memory Leaks While Coding in C Plus Plus</title>
       <link>https://vikaspatelp83.github.io/post/avoid-memory-leaks-while-coding-in-c-plus-plus/</link>
@@ -44,20 +44,6 @@ In this article I&amp;rsquo;ll be discussing about linux bash scripting (shell s
 Bash scripting is a critical skill for every programmer.
 First of all you will need a linux machine to execute these scripts.
 You can use any of the below techniques to get a linux machine:</description>
-    </item>
-    
-    <item>
-      <title>Access Wsl Filesystem From Windows 10 File Explorer</title>
-      <link>https://vikaspatelp83.github.io/post/access-wsl-filesystem-from-windows-10-file-explorer/</link>
-      <pubDate>Tue, 04 May 2021 00:52:26 +0530</pubDate>
-      
-      <guid>https://vikaspatelp83.github.io/post/access-wsl-filesystem-from-windows-10-file-explorer/</guid>
-      <description>If you want to get Linux environment in your Windows system there are some solutions that provide the oportunity.
-For example MYSYS, CYGWIN and a Virtual Machine (If you want complete linux machine) or Multiple Boot.
-But some of them aren&amp;rsquo;t much powerful and some are resources hungry like Virtual Machine.
-So, the solution is WSL (Windows Subsystem for Linux).
-You can learn how to setup WSL from here.
-In this article I&amp;rsquo;ll be sharing how to access WSL file system from Windows 10 file explorer.</description>
     </item>
     
   </channel>

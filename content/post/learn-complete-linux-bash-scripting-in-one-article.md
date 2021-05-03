@@ -1,7 +1,7 @@
 ---
 title: "Learn Complete Linux Bash Scripting in One Article"
 date: 2021-05-04T00:59:14+05:30
-draft: true
+draft: false
 tags: ["Linux", "Programming", "Bash"]
 categories: ["Guide"]
 ---

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CS111 - Adventures of programming</title>
-    <link>https://vikaspatelp83.github.io/</link>
-    <description>Recent content on CS111 - Adventures of programming</description>
+    <title>Posts on CS111 - Adventures of programming</title>
+    <link>https://vikaspatelp83.github.io/post/</link>
+    <description>Recent content in Posts on CS111 - Adventures of programming</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 May 2021 01:24:39 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 May 2021 01:24:39 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Avoid Memory Leaks While Coding in C Plus Plus</title>
       <link>https://vikaspatelp83.github.io/post/avoid-memory-leaks-while-coding-in-c-plus-plus/</link>
