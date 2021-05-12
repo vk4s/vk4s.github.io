@@ -6,7 +6,20 @@
     <description>Recent content on CS111 - Adventures of programming</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 May 2021 16:16:41 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 May 2021 16:28:37 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn Dart Programming</title>
+      <link>https://vikaspatelp83.github.io/post/learn-dart-programming/</link>
+      <pubDate>Wed, 12 May 2021 16:28:37 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/post/learn-dart-programming/</guid>
+      <description>Good Evening, Here are the Hands-on notes for Dart Programming Language.
+I created these notes when I was learning Dart Language. So, these notes might help you too. You can use these notes as a quick reference to Syntax and Demo.
+I&amp;rsquo;ve covered almost every fundamental concept of Dart in this article.
+Photo by Birmingham Museums Trust
+ 1. Basics 1.1 The Main Function Every Dart program starts execution from main() functions.</description>
+    </item>
+    
     <item>
       <title>Types of Pointers in C/C&#43;&#43;</title>
       <link>https://vikaspatelp83.github.io/post/types-of-pointers-in-c-plus-plus-c&#43;&#43;/</link>

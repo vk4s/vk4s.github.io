@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Learn Dart Programming - CS111 - Adventures of programming</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Vikash Patel" /><meta name="description" content="Good Evening, Here are the Hands-on notes for Dart Programming Language.
+I created these notes when I was learning Dart Language. So, these notes might help you too. You can use these notes as a quick reference to Syntax and Demo.
+I&amp;rsquo;ve covered almost every fundamental concept of Dart in this article.
+Photo by Birmingham Museums Trust
+ 1. Basics 1.1 The Main Function Every Dart program starts execution from main() functions." /><meta name="keywords" content="Coding, Development, Life" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
+
+
+<link rel="canonical" href="https://vikaspatelp83.github.io/post/learn-dart-programming/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.6db07c1d275b6ce782335e492442c2d76c4a2bfefbcffcb5dfdc53b8b68a1867.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Learn Dart Programming" />
+<meta property="og:description" content="Good Evening, Here are the Hands-on notes for Dart Programming Language.
+I created these notes when I was learning Dart Language. So, these notes might help you too. You can use these notes as a quick reference to Syntax and Demo.
+I&rsquo;ve covered almost every fundamental concept of Dart in this article.
+Photo by Birmingham Museums Trust
+ 1. Basics 1.1 The Main Function Every Dart program starts execution from main() functions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vikaspatelp83.github.io/post/learn-dart-programming/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-05-12T16:28:37&#43;05:30" />
+<meta property="article:modified_time" content="2021-05-12T16:28:37&#43;05:30" />
+
+<meta itemprop="name" content="Learn Dart Programming">
+<meta itemprop="description" content="Good Evening, Here are the Hands-on notes for Dart Programming Language.
+I created these notes when I was learning Dart Language. So, these notes might help you too. You can use these notes as a quick reference to Syntax and Demo.
+I&rsquo;ve covered almost every fundamental concept of Dart in this article.
+Photo by Birmingham Museums Trust
+ 1. Basics 1.1 The Main Function Every Dart program starts execution from main() functions."><meta itemprop="datePublished" content="2021-05-12T16:28:37&#43;05:30" />
+<meta itemprop="dateModified" content="2021-05-12T16:28:37&#43;05:30" />
+<meta itemprop="wordCount" content="3850">
+<meta itemprop="keywords" content="Dart,Programming," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Learn Dart Programming"/>
+<meta name="twitter:description" content="Good Evening, Here are the Hands-on notes for Dart Programming Language.
+I created these notes when I was learning Dart Language. So, these notes might help you too. You can use these notes as a quick reference to Syntax and Demo.
+I&rsquo;ve covered almost every fundamental concept of Dart in this article.
+Photo by Birmingham Museums Trust
+ 1. Basics 1.1 The Main Function Every Dart program starts execution from main() functions."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">CS111 :: Adventures</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">CS111 :: Adventures</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Learn Dart Programming</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> May 12, 2021 </span>
+        <div class="post-category">
+            <a href="/categories/tutorial/"> Tutorial </a>
+            </div>
+          <span class="more-meta"> 3850 words </span>
+          <span class="more-meta"> 19 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-basics">1. Basics</a>
+      <ul>
+        <li><a href="#11-the-main-function">1.1 The Main Function</a>
+          <ul>
+            <li><a href="#the-syntax-of-main-function">The syntax of main function</a></li>
+            <li><a href="#demo">Demo</a></li>
+          </ul>
+        </li>
+        <li><a href="#12-data-types">1.2 Data Types</a>
+          <ul>
+            <li><a href="#syntax-creating-variables-in-dart">Syntax creating variables in Dart</a></li>
+            <li><a href="#demo-1">Demo</a></li>
+          </ul>
+        </li>
+        <li><a href="#13-string-and-string-interpolation">1.3 String and String Interpolation</a></li>
+        <li><a href="#14-constant-and-final-variables">1.4 Constant and Final Variables</a>
+          <ul>
+            <li><a href="#demo-2">Demo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-control-statements">2. Control Statements</a>
+      <ul>
+        <li><a href="#21-if---else-statements">2.1 If - Else Statements</a>
+          <ul>
+            <li></li>
+            <li><a href="#demo-3">Demo</a></li>
+          </ul>
+        </li>
+        <li><a href="#22-conditional-expression">2.2 Conditional Expression</a></li>
+        <li><a href="#23-switch-case">2.3 Switch Case</a>
+          <ul>
+            <li></li>
+            <li><a href="#demo-4">Demo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#3-looping">3. Looping</a>
+      <ul>
+        <li><a href="#31-for-loop">3.1 For loop</a>
+          <ul>
+            <li><a href="#syntax-1">Syntax</a></li>
+            <li><a href="#demo-5">Demo</a></li>
+            <li><a href="#311-for--in-loop">3.1.1 For &hellip; in Loop</a></li>
+            <li><a href="#312-variation-in-for">3.1.2 Variation in for</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-while-loop">3.2 While Loop</a>
+          <ul>
+            <li><a href="#syntax-3">Syntax</a></li>
+            <li><a href="#demo-7">Demo</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-do-while-loop">3.3 Do &hellip;While Loop</a>
+          <ul>
+            <li><a href="#syntax-4">Syntax</a></li>
+            <li><a href="#demo-8">Demo</a></li>
+            <li><a href="#while-vs-dowhile">While vs Do&hellip;While</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-break-and-continue">3.4 Break and Continue</a>
+          <ul>
+            <li><a href="#break">Break</a></li>
+            <li><a href="#continue">Continue</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-label">3.5 Label</a>
+          <ul>
+            <li><a href="#demo-11">Demo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-functions">4. Functions</a>
+      <ul>
+        <li><a href="#41-breakdown-of-function-syntax">4.1 Breakdown of function (Syntax)</a></li>
+        <li><a href="#42-function-expression-fat-arrow-">4.2 Function Expression (Fat Arrow <code>=&gt;</code>)</a></li>
+        <li><a href="#43-types-of-function-parameters">4.3 Types of function parameters</a>
+          <ul>
+            <li><a href="#431-required-parameters">4.3.1 Required Parameters</a></li>
+            <li><a href="#432-optional-parameters">4.3.2 Optional Parameters</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-exception-handling">5. Exception Handling</a>
+      <ul>
+        <li><a href="#51-example-of-exception">5.1 Example of Exception</a></li>
+        <li><a href="#52-handling-of-exception">5.2 Handling of Exception</a>
+          <ul>
+            <li><a href="#521-try-block">5.2.1 Try Block</a></li>
+            <li><a href="#522-on-block">5.2.2 On Block</a></li>
+            <li><a href="#523-catch-block">5.2.3 Catch Block</a></li>
+            <li><a href="#524-stack-trace">5.2.4 Stack Trace</a></li>
+            <li><a href="#525-finally-block">5.2.5 Finally Block</a></li>
+          </ul>
+        </li>
+        <li><a href="#53-custom-exception">5.3 Custom Exception</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Good Evening,
+Here are the Hands-on notes for Dart Programming Language.<br>
+I created these notes when I was learning Dart Language. So, these notes might help you too.
+You can use these notes as a quick reference to Syntax and Demo.<br>
+I&rsquo;ve covered almost every fundamental concept of Dart in this article.</p>
+<p><img src="https://images.unsplash.com/photo-1576504164753-8fd338cd450b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=727&amp;q=80" alt="">
+Photo by Birmingham Museums Trust</p>
+<hr>
+<h1 id="1-basics">1. Basics</h1>
+<h2 id="11-the-main-function">1.1 The Main Function</h2>
+<p>Every Dart program starts execution from <code>main()</code> functions.</p>
+<h3 id="the-syntax-of-main-function">The syntax of main function</h3>
+<p><em>We use this version when we want to use command line arguments.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">args</span><span class="p">){</span>
+    <span class="c1">// do your stuff here
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Or simple version<br>
+<em>Generally we use this version of main.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(){</span>
+    <span class="c1">// do your stuff here
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="demo">Demo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// say hello world
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">);</span>
+  <span class="c1">// print some numbers, integer expression
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="m">1</span> <span class="o">*</span> <span class="m">2</span> <span class="o">+</span> <span class="m">34</span> <span class="o">-</span> <span class="m">12</span> <span class="o">/</span> <span class="m">5</span><span class="p">);</span>
+  <span class="c1">// print double
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="m">2.53</span><span class="p">);</span>
+  <span class="c1">// boolean
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="12-data-types">1.2 Data Types</h2>
+<p>Literals in Dart.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// literals in Dart
+</span><span class="c1"></span><span class="s2">&#34;Dan&#34;</span><span class="p">;</span> <span class="c1">// String literal
+</span><span class="c1"></span><span class="m">23</span><span class="p">;</span> <span class="c1">// int literal
+</span><span class="c1"></span><span class="m">45.6</span><span class="p">;</span> <span class="c1">// double literal
+</span><span class="c1"></span><span class="kc">true</span><span class="p">;</span> <span class="c1">// bool literal
+</span></code></pre></td></tr></table>
+</div>
+</div><p>There are 4 built-in data types in Dart.</p>
+<table>
+<thead>
+<tr>
+<th>SN</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>int</td>
+<td>Integer value</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>double</td>
+<td>Floating point value</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>String</td>
+<td>String value</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>bool</td>
+<td><code>true</code> , <code>false</code> value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="syntax-creating-variables-in-dart">Syntax creating variables in Dart</h3>
+<p><strong>Use explicit way to declare the variable.</strong></p>
+<p><code>typename variable_name;</code></p>
+<p>Or initialize while creating.<br>
+<code>typename variable_name = initial_value;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">intVariable</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">anotherIntVariable</span> <span class="o">=</span> <span class="m">111</span><span class="p">;</span>
+<span class="kt">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Vikas&#34;</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="m">3.14</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">isdeveloper</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Use implicit way to declare the variable.</strong></p>
+<p>Use <code>var</code> to create any type of variable.<br>
+<code>var variable_name;</code></p>
+<p>Or initialize while creating.<br>
+<code>var variable_name = intial_value</code>;`</p>
+<h3 id="demo-1">Demo</h3>
+<p><strong>Note: <em>In Dart all the data types are objects and their initial value is <code>null</code>.</em></strong></p>
+<p>Create the variables</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart">  <span class="c1">// numbers: int
+</span><span class="c1"></span>  <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="m">90</span><span class="p">;</span>
+  <span class="c1">// store hexadecimal value
+</span><span class="c1"></span>  <span class="kt">int</span> <span class="n">hexValue</span> <span class="o">=</span> <span class="mh">0xEAEAEA</span><span class="p">;</span>
+
+  <span class="c1">// numbers: double
+</span><span class="c1"></span>  <span class="kt">double</span> <span class="n">length</span> <span class="o">=</span> <span class="m">24.6</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">exponentValue</span> <span class="o">=</span> <span class="m">1.4e5</span><span class="p">;</span>
+
+  <span class="c1">// String
+</span><span class="c1"></span>  <span class="kt">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Dave&#34;</span><span class="p">;</span>
+
+  <span class="c1">// boolean
+</span><span class="c1"></span>  <span class="kt">bool</span> <span class="n">going</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="c1">// use var
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="n">name2</span> <span class="o">=</span> <span class="s2">&#34;Vikas&#34;</span><span class="p">;</span> <span class="c1">// String
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="n">age</span> <span class="o">=</span> <span class="m">20</span><span class="p">;</span>        <span class="c1">// int
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="n">score2</span> <span class="o">=</span> <span class="m">45.6</span><span class="p">;</span>   <span class="c1">// double
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="n">isHere</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>   <span class="c1">// bool
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="n">exp</span> <span class="o">=</span> <span class="m">2.5e6</span><span class="p">;</span>     <span class="c1">// exponential (double)
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="n">hex2</span> <span class="o">=</span> <span class="mh">0xEC43AB</span><span class="p">;</span> <span class="c1">// hex (int)
+</span><span class="c1"></span>  <span class="kd">var</span> <span class="n">data</span><span class="p">;</span>            <span class="c1">// will have null
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Print the values</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">print</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>        <span class="c1">//int
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">hexValue</span><span class="p">);</span>     <span class="c1">//int
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">length</span><span class="p">);</span>       <span class="c1">//double
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">exponentValue</span><span class="p">);</span><span class="c1">//double
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">going</span><span class="p">);</span>        <span class="c1">//bool
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>         <span class="c1">//String
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">name2</span><span class="p">);</span>        <span class="c1">//String
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">age</span><span class="p">);</span>          <span class="c1">//int
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">score2</span><span class="p">);</span>       <span class="c1">//int
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">isHere</span><span class="p">);</span>       <span class="c1">//bool
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">exp</span><span class="p">);</span>          <span class="c1">//double
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">hex2</span><span class="p">);</span>         <span class="c1">//int
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>         <span class="c1">//null value
+</span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="13-string-and-string-interpolation">1.3 String and String Interpolation</h2>
+<p>Ways to define a String variable</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"> <span class="c1">// ways to define string
+</span><span class="c1"></span>  <span class="kt">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;Vikas&#39;</span><span class="p">;</span> <span class="c1">// with single quote
+</span><span class="c1"></span>  <span class="kt">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="s2">&#34;Dave&#34;</span><span class="p">;</span> <span class="c1">// with double quote
+</span><span class="c1"></span>  <span class="kt">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="s2">&#34;It&#39;s Easy&#34;</span><span class="p">;</span> <span class="c1">// can use both
+</span><span class="c1"></span>  <span class="kt">String</span> <span class="n">s4</span> <span class="o">=</span> <span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s Easy&#39;</span><span class="p">;</span> <span class="c1">// excape sequence
+</span><span class="c1"></span>  <span class="kt">String</span> <span class="n">s5</span> <span class="o">=</span> <span class="s1">&#39;This is a very very long string &#39;</span>
+      <span class="s1">&#39;and exceeding the line.&#39;</span><span class="p">;</span> <span class="c1">// long string
+</span><span class="c1"></span>  <span class="c1">// auto concatenation of strings
+</span></code></pre></td></tr></table>
+</div>
+</div><p>String Interpolation</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// Normal Concatenation
+</span><span class="c1"></span><span class="kt">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Vikas&#34;</span><span class="p">;</span>
+<span class="kt">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&#34;, We are heading to the west&#34;</span><span class="p">;</span>
+
+<span class="c1">// Interpolation
+</span><span class="c1"></span><span class="kt">String</span> <span class="n">msg2</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">$</span><span class="n">name</span><span class="s2"> We are heading to the west&#34;</span><span class="p">;</span>
+<span class="kt">String</span> <span class="n">msglen</span> <span class="o">=</span> <span class="s2">&#34;Length of msg = </span><span class="si">${</span><span class="n">msg2</span><span class="p">.</span><span class="n">length</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span>
+
+<span class="c1">// Print
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">msg2</span><span class="p">);</span>
+<span class="n">print</span><span class="p">(</span><span class="n">msglen</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We can interpolate any data type with String in <code>print(...)</code> using <code>$varname</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">BoxLength</span> <span class="o">=</span> <span class="m">123</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">BoxWeight</span> <span class="o">=</span> <span class="m">4522.4545</span><span class="p">;</span>
+<span class="n">print</span><span class="p">(</span><span class="s2">&#34;Length of box = </span><span class="si">$</span><span class="n">BoxLength</span><span class="s2"> </span><span class="se">\n</span><span class="s2">Weight of Box = </span><span class="si">$</span><span class="n">BoxWeight</span><span class="s2">&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="14-constant-and-final-variables">1.4 Constant and Final Variables</h2>
+<p>In dart we can create constants using
+-&gt; final
+-&gt; const</p>
+<ol>
+<li><strong>final vs const:</strong></li>
+</ol>
+<ul>
+<li><code>final</code> variable can only be set once and it is initialized when accessed</li>
+<li><code>const</code> is internally final in nature but it is a <code>compile-time constant</code><br>
+-&gt; i.e. it is initialized during compilation</li>
+</ul>
+<ol start="2">
+<li>Instance variable can be final but cannot be constant</li>
+<li>If you want a Constant class level then make it
+<code>static const</code> .</li>
+</ol>
+<h3 id="demo-2">Demo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// final
+</span><span class="c1"></span>  <span class="kd">final</span> <span class="n">city</span> <span class="o">=</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">;</span>
+  <span class="c1">// or
+</span><span class="c1"></span>  <span class="c1">// final String city = &#34;Toronto&#34;;
+</span><span class="c1"></span>  <span class="c1">// city = &#34;NY&#34;; // Error: Can&#39;t assign to the final variable &#39;city&#39;.
+</span><span class="c1"></span>
+  <span class="kd">const</span> <span class="n">PI</span> <span class="o">=</span> <span class="m">3.1415</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="kt">double</span> <span class="n">gravity</span> <span class="o">=</span> <span class="m">9.8</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Class level constant</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">Circle</span> <span class="p">{</span>
+  <span class="kd">final</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;RED&#34;</span><span class="p">;</span> <span class="c1">// OK
+</span><span class="c1"></span>  <span class="c1">// const PI = 3.1415; // Not OK
+</span><span class="c1"></span>  <span class="kd">static</span> <span class="kd">const</span> <span class="n">PI</span> <span class="o">=</span> <span class="m">3.1415</span><span class="p">;</span> <span class="c1">// OK
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Only static fields can be declared as <code>const</code>.
+Try declaring the field as <code>final</code>, or adding the keyword <code>static</code>.</strong></p>
+<hr>
+<hr>
+<h1 id="2-control-statements">2. Control Statements</h1>
+<p>These statements are use to control the execution flow of the program and add various logics to the program.</p>
+<h2 id="21-if---else-statements">2.1 If - Else Statements</h2>
+<p>Simple condition checking.<br>
+<strong>Syntax</strong></p>
+<h4 id="if-alone">IF alone</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">if</span><span class="p">(</span><span class="n">condition</span><span class="p">){</span>
+    <span class="c1">// block 1
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>When the condition is <code>true</code> the code inside <code>block 1</code> gets executed.
+Otherwise nothing happens to the code inside <code>block 1</code>.</p>
+<h4 id="if-and-else-together">IF and ELSE together</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">if</span><span class="p">(</span><span class="n">condition</span><span class="p">){</span>
+    <span class="c1">// block 1
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+    <span class="c1">// block 2
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="if-else-ladder">IF-ELSE ladder</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">if</span><span class="p">(</span><span class="n">condition</span><span class="p">){</span>
+    <span class="c1">// block 1
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">condition2</span><span class="p">){</span>
+    <span class="c1">// block 2
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">condition3</span><span class="p">){</span>
+    <span class="c1">// block 3
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span>
+<span class="p">.</span>
+<span class="p">.</span>
+<span class="p">.</span>
+<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">condition</span> <span class="n">n</span><span class="p">){</span>
+    <span class="c1">// block n
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+    <span class="c1">// block last
+</span><span class="c1"></span>    <span class="c1">// execute the code
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>When the condition is <code>true</code> the code inside the respective <code>block</code> gets executed. Otherwise <code>block last</code> is executed.</p>
+<h3 id="demo-3">Demo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="n">salary</span> <span class="o">=</span> <span class="m">250000</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">salary</span> <span class="o">&gt;</span> <span class="m">200000</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;You, can get the Credit Card&#34;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">salary</span> <span class="o">&gt;</span> <span class="m">150000</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;You can apply for the Credit Card&#34;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;You cannot get the Credit Card&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Check code inside <code>01 basics/05if_else.dart</code>.</p>
+<hr>
+<h2 id="22-conditional-expression">2.2 Conditional Expression</h2>
+<p>Conditional expression is a simple alternative to <code>if-else</code>.<br>
+There are two conditional expressions</p>
+<ol>
+<li>
+<p><strong><code>condition ? expr1 : expr2;</code></strong><br>
+returns <code>expr1</code> if condition is true else returns <code>expr2</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="m">12</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="m">45</span><span class="p">;</span>
+<span class="n">print</span><span class="p">(</span><span class="s2">&#34;Small Number = </span><span class="si">${</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">print</span><span class="p">(</span><span class="s2">&#34;Small Number = </span><span class="si">$</span><span class="n">c</span><span class="s2">);</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong><code>expr1 ?? expr2</code></strong><br>
+if <code>expr1</code> is not-null, returns its value; otherwise, evaluates and returns the value of <code>expr2</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="m">345</span><span class="p">;</span> <span class="c1">// x = null;
+</span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="s2">&#34;Value = </span><span class="si">${</span><span class="n">x</span> <span class="o">??</span> <span class="n">y</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">??</span> <span class="n">y</span><span class="p">;</span>
+<span class="n">print</span><span class="p">(</span><span class="n">z</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<hr>
+<h2 id="23-switch-case">2.3 Switch Case</h2>
+<p>If we have constant conditions like ids as <code>1, 2, 3, 4, 5</code><br>
+Instead using many <code>if-else</code> statements we can use <code>switch-case</code> statement.</p>
+<p>The case can be a constant <code>int</code> or a constant <code>String</code>.</p>
+<h4 id="syntax">Syntax</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">switch</span><span class="p">(</span><span class="n">variable</span><span class="p">){</span>
+    <span class="k">case</span> <span class="m">1</span><span class="o">:</span>
+    <span class="c1">// code
+</span><span class="c1"></span>    <span class="k">break</span><span class="p">;</span> <span class="c1">// this is must
+</span><span class="c1"></span>
+    <span class="k">case</span> <span class="m">2</span><span class="o">:</span>
+    <span class="c1">// another code
+</span><span class="c1"></span>    <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">default</span><span class="o">:</span>
+    <span class="c1">// will execute if no case matches
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>break</code> is must to stop execution after every <code>case</code>.</p>
+<h3 id="demo-4">Demo</h3>
+<p>With integer cases.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// Integer (int)
+</span><span class="c1"></span><span class="kd">var</span> <span class="n">option</span> <span class="o">=</span> <span class="m">2</span><span class="p">;</span>
+<span class="k">switch</span> <span class="p">(</span><span class="n">option</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">case</span> <span class="m">1</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Option 1&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="k">case</span> <span class="m">2</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Option 2&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="k">default</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Invalid option&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>With String cases.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Andy&#34;</span><span class="p">;</span>
+<span class="k">switch</span> <span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">case</span> <span class="s2">&#34;Andy&#34;</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Hello, Andy&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="k">case</span> <span class="s2">&#34;Dave&#34;</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Hello, Dave&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="k">default</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;No name&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="3-looping">3. Looping</h1>
+<p>We can repeat the statements using looping.<br>
+There are 3 loops in Dart :</p>
+<ul>
+<li>For</li>
+<li>While</li>
+<li>Do &hellip;While</li>
+</ul>
+<h2 id="31-for-loop">3.1 For loop</h2>
+<ol>
+<li>The loop first initializes the <code>iteration_var</code></li>
+<li>then checks <code>breaking_condition</code></li>
+<li>then executes the <code>Statements</code> and</li>
+<li>increments or decrements the <code>iteration_var</code> and</li>
+<li>2,3,4, are repeated until <code>breaking_condition</code> remains <code>true</code>.</li>
+</ol>
+<h3 id="syntax-1">Syntax</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">for</span><span class="p">(</span><span class="n">iteration_var</span><span class="p">;</span> <span class="n">breaking_condition</span><span class="p">;</span>  <span class="n">increment</span><span class="o">/</span><span class="n">decrement</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Statements
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="demo-5">Demo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// print even nums
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="n">i</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">){</span>
+        <span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="311-for--in-loop">3.1.1 For &hellip; in Loop</h3>
+<h4 id="syntax-2">Syntax</h4>
+<p><code>for(var varname in IterableList){....}</code></p>
+<h4 id="demo-6">Demo</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// for ..in loop
+</span><span class="c1"></span><span class="n">List</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Dave&#34;</span><span class="p">,</span> <span class="s2">&#34;Andy&#34;</span><span class="p">,</span> <span class="s2">&#34;Vikas&#34;</span><span class="p">,</span> <span class="s2">&#34;Mark&#34;</span><span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="n">name</span> <span class="k">in</span> <span class="n">names</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p>This loop is very useful when using List and other data containers.</p>
+<h3 id="312-variation-in-for">3.1.2 Variation in for</h3>
+<p>we can omit the <code>initial</code>, <code>breaking</code> and <code>incr/decr</code> statements.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">for</span> <span class="p">(;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="m">20</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="p">(;;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="m">10</span><span class="p">){</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="n">x</span> <span class="o">=</span> <span class="m">0</span><span class="p">;;){</span>
+    <span class="n">x</span><span class="o">++</span><span class="p">;</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="m">10</span><span class="p">){</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="32-while-loop">3.2 While Loop</h2>
+<p>While loop is an <code>entry controlled</code> loop.<br>
+The code inside <code>{...}</code> of while loop will execute only when the condition is <code>true</code>.</p>
+<h3 id="syntax-3">Syntax</h3>
+<p><code>while(condition){...}</code></p>
+<p>Here we declare a condition or breaking condition for the loop.<br>
+See the demo</p>
+<h3 id="demo-7">Demo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// while loop
+</span><span class="c1">// print 0...9
+</span><span class="c1"></span><span class="kd">var</span> <span class="n">k</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="c1">// this is must
+</span><span class="c1"></span><span class="k">while</span> <span class="p">(</span><span class="n">k</span> <span class="o">&lt;</span> <span class="m">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+    <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="33-do-while-loop">3.3 Do &hellip;While Loop</h2>
+<p>Do &hellip;while Loop is an <code>exit controlled</code> loop.<br>
+Here the <code>Statement</code> will run for the first time regardless the <code>condition</code> is <code>true</code> or <code>false</code>.<br>
+Then it will check the <code>condition</code> if it is <code>true</code> the the loop will continue execution otherwise it will jump out of the loop.</p>
+<h3 id="syntax-4">Syntax</h3>
+<p><code>do{...} while(conditon);</code>
+Here the semicolon(<code>;</code>) is must.</p>
+<h3 id="demo-8">Demo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// print 0...9
+</span><span class="c1">// do ..while loop
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="m">10</span><span class="p">);</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="while-vs-dowhile">While vs Do&hellip;While</h3>
+<p>Both work in similar manner.<br>
+But, <code>do...while</code> will execute at least once and <code>while</code> won&rsquo;t.</p>
+<hr>
+<h2 id="34-break-and-continue">3.4 Break and Continue</h2>
+<p>These are two loop control statements.<br>
+Which are used to <em>forcefully control</em> the flow of loop execution.</p>
+<h3 id="break">Break</h3>
+<p><code>break</code> is used to stop the execution, and jump out of the loop.</p>
+<h4 id="demo-9">Demo</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// break after printing 5
+</span><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="m">5</span><span class="p">){</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// run and observe
+</span><span class="c1">// break -&gt; stop execution of loop
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="m">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="m">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">i</span><span class="s2"> </span><span class="si">$</span><span class="n">j</span><span class="s2">&#34;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="m">2</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">==</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span> <span class="c1">// will break inner loop
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>We have already used <code>break</code> in <code>switch...case</code> program above.</strong></p>
+<h3 id="continue">Continue</h3>
+<p><code>continue</code> is used to skip current iteration.</p>
+<h4 id="demo-10">Demo</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// continue -&gt; skip an iteraion in a loop
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="m">5</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// skip when i==5
+</span><span class="c1"></span>        <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="35-label">3.5 Label</h2>
+<p>Label is a new concept in Dart (we have seen it in <code>C</code> language with its buddy <code>goto</code>).<br>
+This is not a magical spell from <em>Hogwarts</em> that will do amazing magical things.<br>
+It is just a way to make loop more controlled than before.<br>
+We can name a block of code using label.<br>
+Take a look at below code snippet.</p>
+<h3 id="demo-11">Demo</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">print</span><span class="p">(</span><span class="s2">&#34;i j&#34;</span><span class="p">);</span>
+
+<span class="nl">outerLoop:</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="m">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ignore: unused_label
+</span><span class="c1"></span>  <span class="nl">innerloop:</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="m">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">i</span><span class="s2"> </span><span class="si">$</span><span class="n">j</span><span class="s2">&#34;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="m">2</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">==</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">break</span> <span class="n">outerLoop</span><span class="p">;</span> <span class="c1">// will break outerloop
+</span><span class="c1"></span>    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Try doing this and observe the result of <code>i j</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">print</span><span class="p">(</span><span class="s2">&#34;i j&#34;</span><span class="p">);</span>
+
+<span class="nl">outerLoop:</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="m">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ignore: unused_label
+</span><span class="c1"></span>  <span class="nl">innerloop:</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="m">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">i</span><span class="s2"> </span><span class="si">$</span><span class="n">j</span><span class="s2">&#34;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="m">2</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">==</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">break</span> <span class="n">innerLoop</span><span class="p">;</span> <span class="c1">// will break innerloop
+</span><span class="c1"></span>    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="4-functions">4. Functions</h1>
+<p>Functions are used to group the code statements that do something.<br>
+e.g. You want to calculate the area of a rectangle then the formula will be <code>area = length * width</code>.<br>
+You can do it where you want to use the <code>area</code>. <em>But, if you want to double the area and add 20 to the result then what ?<br>
+Will you write all the code again and again or find some convenient solution.</em>
+So, the solution is using functions.<br>
+Your code will be</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">var</span> <span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span><span class="p">;</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">area</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">area</span> <span class="o">+</span> <span class="m">20</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Now you are able to use the final value of <code>area</code>.
+So, let&rsquo;s declare a simple function that says <code>Hello World!</code> to the user (after learning the simple function we will continue with our <code>area</code> calculation)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">sayHello</span><span class="p">(){</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">);</span>
+  <span class="c1">// That&#39;s common saying hello to the world
+</span><span class="c1"></span>  <span class="c1">// let&#39;s say &#39;Hello Dart, Welcome to Earth&#39;
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Hello Dart, Welcome to Earth&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="41-breakdown-of-function-syntax">4.1 Breakdown of function (Syntax)</h2>
+<p><strong><code>void</code></strong> : It is the return type as you know Dart is a statically typed language like Java, C++ and C. This tells the compiler that we will return a value of the given type <code>(int, double, String, bool, other user defined types)</code>.<br>
+Here <code>void</code> tells that the function will not return any value.</p>
+<p><strong><code>sayHello</code></strong> : It is the name of the function. It can be anything but, should be relevant to the work of the function like: <code>multiplyBy2(), makeHalf(), doubleThevalue(), reduceThree(), calculateSI() etc.</code></p>
+<p><strong><code>()</code></strong> : It is called parameter. we can pass values that we want to work on. Like a <code>name</code> that should be printed instead of <code>Dart</code> or <code>World</code> in the above example.<br>
+Let&rsquo;s assume we want to say Hello to you and we don&rsquo;t know your name then we will pass a <code>String</code> called <code>name</code> and interpolate it with the word <code>Hello</code> and print it.<br>
+Look at the code below..</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">sayHello</span><span class="p">(</span><span class="kt">String</span> <span class="n">name</span><span class="p">){</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Hello, </span><span class="si">$</span><span class="n">name</span><span class="s2">&#34;</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">main</span><span class="p">(){</span>
+  <span class="n">sayHello</span><span class="p">(</span><span class="s2">&#34;Vikas&#34;</span><span class="p">);</span> <span class="c1">// Hello, Vikas
+</span><span class="c1"></span>  <span class="n">sayHello</span><span class="p">(</span><span class="s2">&#34;Dart&#34;</span><span class="p">);</span> <span class="c1">// Hello, Dart
+</span><span class="c1"></span>  <span class="n">sayHello</span><span class="p">(</span><span class="s2">&#34;World&#34;</span><span class="p">);</span> <span class="c1">// Hello, World
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Copy the above code and run it.</p>
+<p>You can also return the string.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">String</span> <span class="n">sayHello</span><span class="p">(</span><span class="kt">String</span> <span class="n">name</span><span class="p">){</span>
+  <span class="k">return</span> <span class="s2">&#34;Hello, </span><span class="si">$</span><span class="n">name</span><span class="s2">&#34;</span><span class="p">;</span>
+  <span class="c1">// don&#39;t forget to change the return type
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">main</span><span class="p">(){</span>
+  <span class="n">print</span><span class="p">(</span><span class="n">sayHello</span><span class="p">(</span><span class="s2">&#34;Vikas&#34;</span><span class="p">));</span> <span class="c1">// Hello, Vikas
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="n">sayHello</span><span class="p">(</span><span class="s2">&#34;Dart&#34;</span><span class="p">));</span> <span class="c1">// Hello, Dart
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="n">sayHello</span><span class="p">(</span><span class="s2">&#34;World&#34;</span><span class="p">));</span> <span class="c1">// Hello, World
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Now, let&rsquo;s work on our <code>area</code> example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">smartAreaOfRectange</span><span class="p">(</span><span class="kt">int</span> <span class="n">length</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span><span class="p">;</span>
+  <span class="n">area</span> <span class="o">=</span> <span class="n">area</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
+  <span class="n">area</span> <span class="o">=</span> <span class="n">area</span> <span class="o">+</span> <span class="m">20</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">area</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Put this code in your file and call it in the main function as we&rsquo;ve done in <code>sayHello(...)</code> function.</p>
+<p>Another Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">doubleIt</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="m">2</span> <span class="o">+</span> <span class="m">17</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">doubleIt</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="42-function-expression-fat-arrow-">4.2 Function Expression (Fat Arrow <code>=&gt;</code>)</h2>
+<p>The function expression or <em>Fat Arrow <code>=&gt;</code></em> is used to make the function definition shorter and simpler.<br>
+<strong>It can only be used when there is only one statement in the function.</strong>
+Like , double the value</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">doubleIt</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="m">2</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>we don&rsquo;t use the <code>return</code> keyword here.<br>
+So ,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">doubleIt</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="m">2</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>will be wrong.</p>
+<hr>
+<h2 id="43-types-of-function-parameters">4.3 Types of function parameters</h2>
+<p>PARAMETERS:</p>
+<ul>
+<li>Required</li>
+<li>Optional:
+<ul>
+<li>Positional</li>
+<li>Named</li>
+<li>Default:
+<ul>
+<li>Positional</li>
+<li>Named</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="431-required-parameters">4.3.1 Required Parameters</h3>
+<p>These are the required parameters that cannot be omitted.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// required parameters
+</span><span class="c1"></span><span class="kt">void</span> <span class="n">requiredParameters</span><span class="p">(</span><span class="kt">String</span> <span class="n">c1</span><span class="p">,</span> <span class="kt">String</span> <span class="n">c2</span><span class="p">,</span> <span class="kt">String</span> <span class="n">c3</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Required Parameters&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">c1</span><span class="s2">, </span><span class="si">$</span><span class="n">c2</span><span class="s2">, </span><span class="si">$</span><span class="n">c3</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// required parameters
+</span><span class="c1"></span>  <span class="n">requiredParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">,</span> <span class="s2">&#34;San Diego&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="432-optional-parameters">4.3.2 Optional Parameters</h3>
+<p>We can omit passing these parameters.<br>
+Blank value is considered as <code>null</code>.</p>
+<h4 id="4321-optional-positional-parameters">4.3.2.1 Optional Positional Parameters</h4>
+<p>We pass the value based on the portion of the parameter in the function.<br>
+These parameters are surrounded by brackets <code>[ ... ]</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// optional positional parameters
+</span><span class="c1"></span><span class="kt">void</span> <span class="n">optionalPositionalParameters</span><span class="p">(</span><span class="kt">String</span> <span class="n">c1</span><span class="p">,</span> <span class="kt">String</span> <span class="n">c2</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="n">c3</span><span class="p">])</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Optional Positional Parameters&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">c1</span><span class="s2">, </span><span class="si">$</span><span class="n">c2</span><span class="s2">, </span><span class="si">$</span><span class="n">c3</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// optional positional parameters
+</span><span class="c1"></span>  <span class="n">optionalPositionalParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">);</span> <span class="c1">// 2 values
+</span><span class="c1"></span>  <span class="n">optionalPositionalParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">,</span> <span class="s2">&#34;San Diego&#34;</span><span class="p">);</span> <span class="c1">// 3 values
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="4322-optional-named-parameters">4.3.2.2 Optional Named Parameters</h4>
+<p>we can give the name of parameter while passing the value.<br>
+These parameters are surrounded by braces <code>{ ... }</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// optional named parameters
+</span><span class="c1"></span><span class="kt">void</span> <span class="n">optionalNamedParameters</span><span class="p">(</span><span class="kt">String</span> <span class="n">c1</span><span class="p">,</span> <span class="kt">String</span> <span class="n">c2</span><span class="p">,</span> <span class="p">{</span><span class="kt">String</span> <span class="n">c3</span><span class="p">})</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Optional Named Parameters&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">c1</span><span class="s2">, </span><span class="si">$</span><span class="n">c2</span><span class="s2">, </span><span class="si">$</span><span class="n">c3</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// optional named parameters
+</span><span class="c1"></span>  <span class="n">optionalNamedParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">);</span>
+  <span class="n">optionalNamedParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">,</span> <span class="nl">c3:</span> <span class="s2">&#34;San Diego&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="4323-default-parameters">4.3.2.3 Default Parameters</h4>
+<p>These are the <code>positional and named</code> parameters with default value.</p>
+<p><strong>Default Positional</strong>
+We pass the default value of the Positional Parameter while defining the function <code>[String name = &quot;Dart&quot;, int id = 1111]</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// default positional parameters
+</span><span class="c1"></span><span class="kt">void</span> <span class="n">defaultPositionalParameters</span><span class="p">(</span><span class="kt">String</span> <span class="n">c1</span><span class="p">,</span> <span class="kt">String</span> <span class="n">c2</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="n">c3</span> <span class="o">=</span> <span class="s2">&#34;Mumbai&#34;</span><span class="p">])</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;deafault positional Parameters&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">c1</span><span class="s2">, </span><span class="si">$</span><span class="n">c2</span><span class="s2">, </span><span class="si">$</span><span class="n">c3</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// default positional
+</span><span class="c1"></span>  <span class="n">defaultPositionalParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">);</span>
+  <span class="n">defaultPositionalParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">,</span> <span class="s2">&#34;San Diego&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Default Named</strong>
+We pass the default value of the Named Parameter while defining the function <code>{String name = &quot;Dart&quot;, int id = 1111}</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// default named parameters
+</span><span class="c1"></span><span class="kt">void</span> <span class="n">defaultNamedParameters</span><span class="p">(</span><span class="kt">String</span> <span class="n">c1</span><span class="p">,</span> <span class="kt">String</span> <span class="n">c2</span><span class="p">,</span> <span class="p">{</span><span class="kt">String</span> <span class="n">c3</span> <span class="o">=</span> <span class="s2">&#34;Mumbai&#34;</span><span class="p">})</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;default Named Parameters&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">c1</span><span class="s2">, </span><span class="si">$</span><span class="n">c2</span><span class="s2">, </span><span class="si">$</span><span class="n">c3</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// default named
+</span><span class="c1"></span>  <span class="n">defaultNamedParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">);</span>
+  <span class="n">defaultNamedParameters</span><span class="p">(</span><span class="s2">&#34;NY&#34;</span><span class="p">,</span> <span class="s2">&#34;Toronto&#34;</span><span class="p">,</span> <span class="nl">c3:</span> <span class="s2">&#34;San Diego&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="5-exception-handling">5. Exception Handling</h1>
+<p><em>What are exceptions ?</em><br>
+An <strong>Exception</strong> is a runtime error which occurs when the program is running due to some error that the compiler was unable to detect.<br>
+If an exception occurs the program crashes.<br>
+If not handled may cause serious issues.</p>
+<p>Below table showing some exceptions in Dart</p>
+<div class="scrollme" markdown="block">
+<table>
+<thead>
+<tr>
+<th>S.N.</th>
+<th>Exception</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>DeferredLoadException</td>
+<td>Thrown when a deferred library fails to load.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>FormatException</td>
+<td>Exception thrown when a string or some other data does not have an expected format and cannot be parsed or processed.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>IntegerDivisionByZeroException</td>
+<td>Thrown when a number is divided by zero.</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>IOException</td>
+<td>Base class for all Input-Output related exceptions.</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>IsolateSpawnException</td>
+<td>Thrown when an isolate cannot be created.</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Timeout</td>
+<td>Thrown when a scheduled timeout happens while waiting for an async result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="51-example-of-exception">5.1 Example of Exception</h2>
+<p>Simplest example will be dividing a number by <em>Zero</em>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart">  <span class="kt">void</span> <span class="n">main</span><span class="p">(){</span>
+    <span class="c1">// integer division
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="m">12</span> <span class="o">~/</span> <span class="m">4</span><span class="p">;</span> <span class="c1">// OK
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">badResult</span> <span class="o">=</span> <span class="m">15</span> <span class="o">~/</span> <span class="m">0</span><span class="p">;</span> <span class="c1">// NOT OK
+</span><span class="c1"></span>
+  <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>So, the line <code>double badResult = 15 / 0;</code> raises an <code>IntegerDivisionByZeroException</code> exception.</p>
+<h2 id="52-handling-of-exception">5.2 Handling of Exception</h2>
+<p>We can handle the exceptions by surrounding the exception occurring code inside a <code>try</code> block.<br>
+And handle the exception using <code>on</code>, <code>catch</code>, and <code>finally</code> blocks.</p>
+<h3 id="521-try-block">5.2.1 Try Block</h3>
+<p>This is the place where we write an exception occurring statement.</p>
+<h4 id="demo-12">Demo</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">try</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="m">12</span> <span class="o">~/</span> <span class="m">0</span><span class="p">;</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Division = </span><span class="si">$</span><span class="n">answer</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>If the statement inside <code>try</code> block raises an exception the program will not crash this time instead it will throw the exception out of the <code>try</code> block which we&rsquo;ll have to catch.</p>
+<h3 id="522-on-block">5.2.2 On Block</h3>
+<p>We can use <code>on</code> to catch the exception <em>if we know the thrown exception.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// CASE1: Handle with &#34;on&#34;
+</span><span class="c1">// use on when we know the exception
+</span><span class="c1"></span><span class="k">try</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="m">12</span> <span class="o">~/</span> <span class="m">0</span><span class="p">;</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Division = </span><span class="si">$</span><span class="n">answer</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">on</span> <span class="n">IntegerDivisionByZeroException</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Cannot divide by zero&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Here we know the thrown exception <code>IntegerDivisionByZeroException</code>.</p>
+<h3 id="523-catch-block">5.2.3 Catch Block</h3>
+<p>If we don&rsquo;t know the exception we can simply catch it using <code>catch</code> block.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// CASE2: Handle with &#34;catch&#34;
+</span><span class="c1">// use catch(e) when we don&#39;t know the exception
+</span><span class="c1"></span><span class="k">try</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="m">12</span> <span class="o">~/</span> <span class="m">0</span><span class="p">;</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Division = </span><span class="si">$</span><span class="n">answer</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;The exception : </span><span class="si">$</span><span class="n">e</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Here the unknown exception is successfully handled.</p>
+<h3 id="524-stack-trace">5.2.4 Stack Trace</h3>
+<p>We can use the Stack Trace to find the events that threw the exception.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart">
+<span class="c1">// CASE3: using STACK TRACE to know the events occured
+</span><span class="c1">// before exception was thrown
+</span><span class="c1"></span><span class="k">try</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="m">12</span> <span class="o">~/</span> <span class="m">0</span><span class="p">;</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Division = </span><span class="si">$</span><span class="n">answer</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">stackTraceObject</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;The exception : </span><span class="si">$</span><span class="n">e</span><span class="s2">&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Stack Trace:</span><span class="se">\n</span><span class="si">$</span><span class="n">stackTraceObject</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="525-finally-block">5.2.5 Finally Block</h3>
+<p>This Block is always executed regardless the occurance of the exception.<br>
+<strong>No exception:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// CASE4: finally clause
+</span><span class="c1"></span><span class="k">try</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="m">12</span> <span class="o">~/</span> <span class="m">4</span><span class="p">;</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Division = </span><span class="si">$</span><span class="n">answer</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">stackTraceObject</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;The exception : </span><span class="si">$</span><span class="n">e</span><span class="s2">&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Stack Trace:</span><span class="se">\n</span><span class="si">$</span><span class="n">stackTraceObject</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;This will always execute No exception)&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>With Exception:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// CASE4: finally clause
+</span><span class="c1"></span><span class="k">try</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="m">12</span> <span class="o">~/</span> <span class="m">0</span><span class="p">;</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Division = </span><span class="si">$</span><span class="n">answer</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">stackTraceObject</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;The exception : </span><span class="si">$</span><span class="n">e</span><span class="s2">&#34;</span><span class="p">);</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Stack Trace:</span><span class="se">\n</span><span class="si">$</span><span class="n">stackTraceObject</span><span class="s2">&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;This will always execute (With exception)&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="53-custom-exception">5.3 Custom Exception</h2>
+<p><strong>Q. Can we have our iwn exceptions ?</strong><br>
+<strong>A. Yes, we can define our own exception class using the following method.</strong></p>
+<p>First create a class with <code>YourCustomExceptionName</code> and <em>implement</em>* the built-in <code>Exception</code> class.<br>
+Then <em>override</em> the <code>errorMessage()</code> method to display &ldquo;Your custom error message&rdquo;.</p>
+<p>*<em>We will learn about Object Oriented Programming later in the article.</em></p>
+<h4 id="demo-13">Demo</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">// custom exception class
+</span><span class="c1"></span><span class="kd">class</span> <span class="nc">DepositAmountLessThanZeroException</span> <span class="kd">implements</span> <span class="n">Exception</span> <span class="p">{</span>
+  <span class="kt">String</span> <span class="n">errorMessage</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&#34;Ammount cannot be less than 0&#34;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Let&rsquo;s use the custom exception class.<br>
+Create a function which throws the exception.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">depositMoney</span><span class="p">(</span><span class="kt">int</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">amount</span> <span class="o">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="n">DepositAmountLessThanZeroException</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;Successful, Deposited </span><span class="si">$</span><span class="n">amount</span><span class="s2">&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Now call the function in the try block.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// OK
+</span><span class="c1"></span>  <span class="k">try</span> <span class="p">{</span>
+    <span class="n">depositMoney</span><span class="p">(</span><span class="m">1500</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">errorMessage</span><span class="p">());</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// OK
+</span><span class="c1"></span>  <span class="k">try</span> <span class="p">{</span>
+    <span class="n">depositMoney</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">errorMessage</span><span class="p">());</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Exception
+</span><span class="c1"></span>  <span class="k">try</span> <span class="p">{</span>
+    <span class="n">depositMoney</span><span class="p">(</span><span class="o">-</span><span class="m">1233</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">errorMessage</span><span class="p">());</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>That&rsquo;s all from my side on basic exception handling.<br>
+We will discuss the topic in detail later in another blog.</p>
+<p>Thanks for reading. 🙏<br>
+If you liked it feel free to share with your dear ones.💗<br>
+And tell me what do you think in the comment box.💬</p>
+<p>Stay tuned.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Vikash Patel</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        May 12, 2021
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/dart/">Dart</a>
+          <a href="/tags/programming/">Programming</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/types-of-pointers-in-c-plus-plus-c&#43;&#43;/">
+            <span class="next-text nav-default">Types of Pointers in C/C&#43;&#43;</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="https://vikaspatelp83.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Vikash Patel</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
