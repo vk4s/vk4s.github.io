@@ -6,7 +6,19 @@
     <description>Recent content in Tutorial on CS111 - Adventures of programming</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 May 2021 01:24:39 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 May 2021 16:16:41 +0530</lastBuildDate><atom:link href="https://vikaspatelp83.github.io/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Types of Pointers in C/C&#43;&#43;</title>
+      <link>https://vikaspatelp83.github.io/post/types-of-pointers-in-c-plus-plus-c&#43;&#43;/</link>
+      <pubDate>Wed, 12 May 2021 16:16:41 +0530</pubDate>
+      
+      <guid>https://vikaspatelp83.github.io/post/types-of-pointers-in-c-plus-plus-c&#43;&#43;/</guid>
+      <description>Photo of Hyacinth macaw by Roi Dimor on Unsplash
+ Types of Pointers in C / C++ 1. Null Pointer It is a pointer pointing to nothing. NULL pointer points to the base address of the segment.
+-EXAMPLE-
+1 2 3 4  int * ptr = (int) * 0; float * fptr = (float) * 0; double * dptr = (double) * 0; char * chptr = (char) * 0;   Other ways of initializing NULL pointer 1 2  int * ptr = NULL; char * chptr = &amp;#39;\0&amp;#39;;    NULL also means 0 in macro 1  #define NULL 0     2.</description>
+    </item>
+    
     <item>
       <title>Avoid Memory Leaks While Coding in C Plus Plus</title>
       <link>https://vikaspatelp83.github.io/post/avoid-memory-leaks-while-coding-in-c-plus-plus/</link>
